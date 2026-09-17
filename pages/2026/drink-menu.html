@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merry Sips & Spirits • Christmas Cheer Carnival 2026</title>
+<style>
+  :root {
+    --red:#9e1f1f;
+    --deep-red:#7c1414;
+    --green:#14543f;
+    --deep-green:#0d3c2e;
+    --gold:#d6ab49;
+    --cream:#fff8e9;
+    --paper:#fffdf7;
+    --ink:#35281f;
+    --tan:#ead9bb;
+    --line:#d4c2a0;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0;
+    font-family: Georgia, "Times New Roman", serif;
+    color:var(--ink);
+    background:
+      radial-gradient(circle at 10% 20%, rgba(255,255,255,.10) 0 2px, transparent 2px),
+      linear-gradient(135deg, var(--deep-green), #0b3026 55%, var(--green));
+    padding:20px 10px;
+  }
+  .page {
+    width:min(1100px,100%);
+    margin:auto;
+    background:var(--cream);
+    border:8px solid var(--deep-red);
+    outline:3px solid var(--gold);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 22px 60px rgba(0,0,0,.35);
+  }
+  .candy {
+    height:14px;
+    background:repeating-linear-gradient(45deg,#b51f24 0 12px,#fff6e7 12px 24px);
+  }
+  .hero {
+    padding:20px;
+    background:linear-gradient(180deg,#fffaf0,#f7ead0);
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .hero img {
+    width:min(100%,880px);
+    display:block;
+    margin:0 auto 16px;
+    border-radius:14px;
+    box-shadow:0 12px 26px rgba(0,0,0,.18);
+    border:2px solid #e5d4b5;
+  }
+  .hero h1 {
+    margin:8px 0 6px;
+    font-size:clamp(2.1rem,5vw,3.8rem);
+    color:var(--red);
+    line-height:.95;
+  }
+  .hero h1 span {
+    color:var(--green);
+    display:block;
+    font-size:.62em;
+    font-style:italic;
+    margin-top:8px;
+  }
+  .intro {
+    max-width:860px;
+    margin:12px auto 0;
+    font-size:1.05rem;
+    line-height:1.55;
+  }
+  .intro-box {
+    margin:18px auto 0;
+    max-width:880px;
+    background:#fff4dc;
+    border:2px solid var(--gold);
+    border-radius:16px;
+    padding:16px 18px;
+    line-height:1.55;
+    box-shadow:0 6px 0 rgba(124,20,20,.08);
+  }
+  .section {
+    padding:18px 20px;
+  }
+  .panel {
+    background:var(--paper);
+    border:2px solid #dcc8a2;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 8px 18px rgba(72,42,17,.08);
+  }
+  .panel-title {
+    text-align:center;
+    color:var(--green);
+    font-size:1.8rem;
+    margin:0 0 8px;
+  }
+  .panel-sub {
+    text-align:center;
+    margin:0 0 14px;
+    line-height:1.45;
+  }
+  .filters {
+    display:grid;
+    grid-template-columns:1fr 1fr auto auto;
+    gap:10px;
+    align-items:end;
+  }
+  label {
+    font-weight:700;
+    display:block;
+    margin-bottom:6px;
+  }
+  select, button {
+    width:100%;
+    min-height:46px;
+    border-radius:12px;
+    border:1px solid #cdb78f;
+    padding:10px 12px;
+    font:inherit;
+    background:white;
+  }
+  button {
+    cursor:pointer;
+    font-weight:700;
+  }
+  .primary-btn {
+    background:linear-gradient(180deg,#ba2b2b,#941a1a);
+    color:white;
+    border-color:#7b1111;
+  }
+  .secondary-btn {
+    background:linear-gradient(180deg,#175c46,#124534);
+    color:white;
+    border-color:#0f382a;
+  }
+  .resultbar {
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    align-items:center;
+    margin-top:14px;
+    flex-wrap:wrap;
+  }
+  .result-count {
+    font-weight:700;
+    color:var(--red);
+  }
+  .spotlight {
+    margin-top:14px;
+    padding:14px 16px;
+    border-radius:14px;
+    border:1px solid #dcc8a2;
+    background:#fff8ea;
+    display:none;
+  }
+  .spotlight.show {
+    display:block;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+    margin-top:16px;
+  }
+  .drink-card {
+    background:#fffdf8;
+    border:2px solid #dcc8a2;
+    border-radius:18px;
+    padding:16px;
+    box-shadow:0 7px 16px rgba(72,42,17,.08);
+  }
+  .drink-card.hidden {
+    display:none;
+  }
+  .card-head {
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-bottom:10px;
+  }
+  .emoji {
+    font-size:1.9rem;
+    line-height:1;
+  }
+  .title-block h3 {
+    margin:0;
+    font-size:1.25rem;
+    color:var(--red);
+  }
+  .desc {
+    margin:6px 0 0;
+    color:#5b4d3f;
+    line-height:1.4;
+  }
+  .tag-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:12px;
+  }
+  .tag {
+    padding:5px 10px;
+    border-radius:999px;
+    border:1px solid #d8c6a6;
+    background:#fff5de;
+    font-size:.82rem;
+  }
+  .tag.strong {
+    background:#f3e3be;
+    font-weight:700;
+  }
+  .recipe-box {
+    background:#fffaf0;
+    border:1px solid #e1d0b0;
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .recipe-box summary {
+    list-style:none;
+    cursor:pointer;
+    padding:12px 14px;
+    font-weight:700;
+    color:var(--green);
+  }
+  .recipe-box summary::-webkit-details-marker { display:none; }
+  .recipe-box[open] summary {
+    border-bottom:1px dashed #ddcba9;
+  }
+  .recipe-content {
+    padding:12px 14px 14px;
+    line-height:1.5;
+  }
+  .recipe-content ul {
+    margin:8px 0 12px 20px;
+    padding:0;
+  }
+  .recipe-section {
+    margin-top:4px;
+  }
+  .small-note {
+    margin-top:10px;
+    color:#6e6358;
+    font-size:.93rem;
+  }
+  .footer {
+    text-align:center;
+    background:#f1e3c7;
+    border-top:1px solid var(--line);
+    padding:18px 14px 24px;
+  }
+  .footer .big {
+    color:var(--red);
+    font-size:1.45rem;
+    font-weight:700;
+  }
+  .footer .small {
+    margin-top:6px;
+    color:var(--green);
+    font-style:italic;
+  }
+  @media (max-width:860px) {
+    .filters {
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  @media (max-width:700px) {
+    .grid {
+      grid-template-columns:1fr;
+    }
+    .filters {
+      grid-template-columns:1fr;
+    }
+    .page {
+      border-width:5px;
+    }
+    .hero, .section {
+      padding-left:14px;
+      padding-right:14px;
+    }
+  }
+</style>
+</head>
+<body>
+<style>
+.site-hubbar{position:relative;z-index:2147483647;display:flex;align-items:center;gap:.6rem;
+  flex-wrap:wrap;padding:.55rem 1rem;background:#1d2a24;color:#f3e8d2;
+  font:600 .82rem/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  letter-spacing:.02em;border-bottom:2px solid #c8a24a;box-sizing:border-box}
+.site-hubbar a{color:#f3e8d2;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px}
+.site-hubbar a:hover,.site-hubbar a:focus{border-bottom-color:#c8a24a;color:#fff}
+.site-hubbar .sep{color:#7e8b82}
+.site-hubbar .here{color:#c8a24a}
+</style>
+<div class="site-hubbar">
+  <a href="../../index.html">&#8592; Glave Family Happenings</a>
+  <span class="sep">/</span>
+  <a href="../../year.html?y=2026">2026</a>
+  <span class="sep">/</span>
+  <span class="here">Merry Sips & Spirits</span>
+</div>
+
+  <main class="page">
+    <div class="candy"></div>
+
+    <section class="hero">
+      <img src="../../assets/img/drink-menu/7b2a01a675.png" alt="Christmas Cheer Carnival 2026 drink menu reference">
+      <h1>Merry Sips <span>& Spirits</span></h1>
+      <p class="intro">
+        Here’s a more reliable interactive version that keeps the <strong>Christmas Cheer Carnival</strong> vibe.
+        All drinks are visible by default, and each one has a clickable recipe section.
+      </p>
+      <div class="intro-box">
+        <strong>🎅 Santa’s Serving Notice:</strong> Every drink starts as a mocktail, and the spirited option is there if you want to make it merry.
+        Use the filters below to sort by spirit or flavor vibe, or let Santa choose for you.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="panel-title">Choose Your Holiday Pour</h2>
+        <p class="panel-sub">Filter by spirit and flavor vibe, then open any recipe to see the mocktail build and optional add-in.</p>
+
+        <div class="filters">
+          <div>
+            <label for="spiritFilter">Spirit</label>
+            <select id="spiritFilter">
+              <option value="all">Anything merry</option>
+              <option value="mocktail">Mocktail only</option>
+              <option value="vodka">Vodka</option>
+              <option value="rum">Rum</option>
+              <option value="whisky">Whisky</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="vibeFilter">Flavor vibe</label>
+            <select id="vibeFilter">
+              <option value="all">Surprise me</option>
+              <option value="bubbly">Bubbly</option>
+              <option value="fruity">Fruity</option>
+              <option value="cozy">Cozy & warm</option>
+              <option value="gingery">Gingery</option>
+              <option value="citrus">Citrusy</option>
+            </select>
+          </div>
+
+          <div>
+            <label>&nbsp;</label>
+            <button class="primary-btn" id="santaPickBtn" type="button">🎅 Santa's Pick</button>
+          </div>
+
+          <div>
+            <label>&nbsp;</label>
+            <button class="secondary-btn" id="resetBtn" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="resultbar">
+          <div class="result-count"><span id="resultCount">12</span> merry options showing</div>
+          <div>Open any recipe card below to see the ingredients.</div>
+        </div>
+
+        <div id="spotlight" class="spotlight" aria-live="polite"></div>
+
+        <div class="grid" id="drinkGrid">
+          
+    <article class="drink-card" data-spirits="vodka,rum" data-vibes="bubbly,fruity,citrus" data-name="Merry Cranberry Fizz">
+      <div class="card-head">
+        <div class="emoji">🍒</div>
+        <div class="title-block">
+          <h3>Merry Cranberry Fizz</h3>
+          <p class="desc">Tart, bubbly, very Christmas.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">bubbly</span><span class="tag">fruity</span><span class="tag">citrus</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>3 oz cranberry juice</li><li>3 oz ginger ale</li><li>½ oz fresh lime juice</li><li>Rosemary sprig</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz vodka or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="vodka" data-vibes="gingery,fruity,citrus" data-name="Rudolph Mule">
+      <div class="card-head">
+        <div class="emoji">🦌</div>
+        <div class="title-block">
+          <h3>Rudolph Mule</h3>
+          <p class="desc">Gingery, bright, easy.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">gingery</span><span class="tag">fruity</span><span class="tag">citrus</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>2 oz cranberry juice</li><li>4 oz ginger beer</li><li>½ oz fresh lime juice</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz vodka</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="whisky,rum" data-vibes="cozy,bubbly" data-name="Spiced Apple Cheer">
+      <div class="card-head">
+        <div class="emoji">🍎</div>
+        <div class="title-block">
+          <h3>Spiced Apple Cheer</h3>
+          <p class="desc">Cozy apple-cinnamon cheer.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">cozy</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>4 oz apple cider</li><li>2 oz ginger ale</li><li>Pinch cinnamon</li><li>Orange slice</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz whisky or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="rum,vodka" data-vibes="fruity,bubbly" data-name="North Pole Punch">
+      <div class="card-head">
+        <div class="emoji">🎁</div>
+        <div class="title-block">
+          <h3>North Pole Punch</h3>
+          <p class="desc">Fruity party punch.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">fruity</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>2 oz cranberry juice</li><li>2 oz orange juice</li><li>2 oz pineapple juice</li><li>2 oz ginger ale</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz rum or vodka</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="vodka" data-vibes="fruity,citrus,bubbly" data-name="Winter Berry Lemonade">
+      <div class="card-head">
+        <div class="emoji">❄️</div>
+        <div class="title-block">
+          <h3>Winter Berry Lemonade</h3>
+          <p class="desc">Light and refreshing.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">fruity</span><span class="tag">citrus</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>3 oz lemonade</li><li>2 oz cranberry juice</li><li>2 oz club soda</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz vodka</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="rum,vodka,whisky" data-vibes="fruity,bubbly" data-name="Jingle Juice">
+      <div class="card-head">
+        <div class="emoji">🔔</div>
+        <div class="title-block">
+          <h3>Jingle Juice</h3>
+          <p class="desc">Easy crowd-pleaser.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">fruity</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>2 oz cranberry juice</li><li>2 oz apple juice</li><li>3 oz ginger ale</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz rum, vodka, or whisky</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="vodka,rum" data-vibes="citrus,fruity,bubbly" data-name="Christmas Orange-Cranberry Sparkler">
+      <div class="card-head">
+        <div class="emoji">🍊</div>
+        <div class="title-block">
+          <h3>Christmas Orange-Cranberry Sparkler</h3>
+          <p class="desc">Citrus-forward sparkle.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">citrus</span><span class="tag">fruity</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>3 oz orange juice</li><li>2 oz cranberry juice</li><li>2 oz sparkling water</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz vodka or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="whisky,rum" data-vibes="cozy" data-name="Caramel-less Apple Pie Cider">
+      <div class="card-head">
+        <div class="emoji">🥧</div>
+        <div class="title-block">
+          <h3>Caramel-less Apple Pie Cider</h3>
+          <p class="desc">Basically Christmas in a mug.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">cozy</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>6 oz warm apple cider</li><li>Pinch cinnamon</li><li>Pinch nutmeg</li><li>¼ tsp vanilla</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz whisky or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="rum,whisky" data-vibes="cozy,gingery" data-name="Gingerbread Hot Cocoa">
+      <div class="card-head">
+        <div class="emoji">☕</div>
+        <div class="title-block">
+          <h3>Gingerbread Hot Cocoa</h3>
+          <p class="desc">Rich, warm, dessert-like.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">cozy</span><span class="tag">gingery</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>6 oz hot chocolate</li><li>Pinch cinnamon</li><li>Pinch ground ginger</li><li>¼ tsp vanilla</li><li>Whipped cream, optional</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz rum or whisky</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="whisky" data-vibes="cozy" data-name="Fireside Maple Cider">
+      <div class="card-head">
+        <div class="emoji">🔥</div>
+        <div class="title-block">
+          <h3>Fireside Maple Cider</h3>
+          <p class="desc">Warm, mellow, comforting.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">cozy</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>6 oz warm apple cider</li><li>½ oz maple syrup</li><li>Pinch cinnamon</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz whisky</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="vodka,rum" data-vibes="fruity,citrus,bubbly" data-name="Holiday Cranberry Smash">
+      <div class="card-head">
+        <div class="emoji">❤️</div>
+        <div class="title-block">
+          <h3>Holiday Cranberry Smash</h3>
+          <p class="desc">Fruity and a little punchier.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">fruity</span><span class="tag">citrus</span><span class="tag">bubbly</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>¼ cup cranberries or 2 oz cranberry juice</li><li>1 orange wedge</li><li>½ oz lime juice</li><li>3 oz ginger ale</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz vodka or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+    <article class="drink-card" data-spirits="whisky,rum" data-vibes="cozy,citrus" data-name="Hot Toddy">
+      <div class="card-head">
+        <div class="emoji">🫖</div>
+        <div class="title-block">
+          <h3>Hot Toddy</h3>
+          <p class="desc">Warm, soothing, classic.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <span class="tag strong">Mocktail first</span>
+        <span class="tag">cozy</span><span class="tag">citrus</span>
+      </div>
+      <details class="recipe-box">
+        <summary>View recipe</summary>
+        <div class="recipe-content">
+          <div class="recipe-section"><strong>Mocktail build</strong></div>
+          <ul><li>6 oz hot water</li><li>1 Tbsp honey</li><li>½ oz lemon juice</li><li>Cinnamon stick</li></ul>
+          <div class="recipe-section"><strong>Add a little cheer:</strong> 1½ oz whisky or rum</div>
+          <div class="small-note">Serve over ice unless it’s one of the warm drinks. Garnish however festive your heart desires.</div>
+        </div>
+      </details>
+    </article>
+    
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="big">Good Drinks • Good Friends • A Brighter Season</div>
+      <div class="small">Same great drinks • mocktail or make it merry</div>
+    </footer>
+
+    <div class="candy"></div>
+  </main>
+
+<script>
+(function() {
+  const spiritFilter = document.getElementById('spiritFilter');
+  const vibeFilter = document.getElementById('vibeFilter');
+  const resetBtn = document.getElementById('resetBtn');
+  const santaPickBtn = document.getElementById('santaPickBtn');
+  const spotlight = document.getElementById('spotlight');
+  const cards = Array.from(document.querySelectorAll('.drink-card'));
+  const resultCount = document.getElementById('resultCount');
+
+  function matches(card) {
+    const spirit = spiritFilter.value;
+    const vibe = vibeFilter.value;
+    const spirits = (card.dataset.spirits || '').split(',');
+    const vibes = (card.dataset.vibes || '').split(',');
+
+    const spiritOk = spirit === 'all' || spirit === 'mocktail' || spirits.includes(spirit);
+    const vibeOk = vibe === 'all' || vibes.includes(vibe);
+    return spiritOk && vibeOk;
+  }
+
+  function applyFilters() {
+    let count = 0;
+    cards.forEach(card => {
+      const show = matches(card);
+      card.classList.toggle('hidden', !show);
+      if (show) count++;
+    });
+    resultCount.textContent = count;
+    spotlight.classList.remove('show');
+    spotlight.textContent = '';
+  }
+
+  spiritFilter.addEventListener('change', applyFilters);
+  vibeFilter.addEventListener('change', applyFilters);
+
+  resetBtn.addEventListener('click', function() {
+    spiritFilter.value = 'all';
+    vibeFilter.value = 'all';
+    applyFilters();
+  });
+
+  santaPickBtn.addEventListener('click', function() {
+    const visible = cards.filter(card => !card.classList.contains('hidden'));
+    if (!visible.length) {
+      spotlight.classList.add('show');
+      spotlight.innerHTML = '<strong>Santa says:</strong> No drinks match those filters. Try resetting the menu before the elves panic.';
+      return;
+    }
+    const card = visible[Math.floor(Math.random() * visible.length)];
+    const name = card.dataset.name || 'Mystery Pour';
+    spotlight.classList.add('show');
+    spotlight.innerHTML = '<strong>🎅 Santa has chosen:</strong> ' + name + '<br><span style="color:#6e6358">A very official North Pole recommendation.</span>';
+    const details = card.querySelector('details');
+    if (details) details.open = true;
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  applyFilters();
+})();
+</script>
+</body>
+</html>

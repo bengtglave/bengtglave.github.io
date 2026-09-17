@@ -1,0 +1,276 @@
+/* Shared chrome for the hub and year pages. The activity pages keep their own
+   styling — this only dresses the pages that list them. */
+
+:root {
+  --ink: #0e1714;
+  --ink-2: #16231e;
+  --paper: #fdf6e7;
+  --paper-dim: #e8dcc4;
+  --gold: #c8a24a;
+  --muted: #9aa8a0;
+  --rule: #2a3a33;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% -10%, rgba(200, 162, 74, .14), transparent 55%),
+    radial-gradient(ellipse at 85% 0%, rgba(13, 116, 118, .16), transparent 50%),
+    linear-gradient(170deg, var(--ink-2), var(--ink) 60%);
+  background-attachment: fixed;
+  color: var(--paper);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 72px) clamp(18px, 4vw, 32px) 80px;
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.masthead { text-align: center; }
+
+.crest {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: .5rem;
+}
+
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+  color: var(--paper);
+}
+
+.masthead .tagline {
+  margin: .9rem auto 0;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: clamp(.95rem, 2.4vw, 1.08rem);
+}
+
+.rule {
+  width: 120px;
+  height: 1px;
+  margin: clamp(26px, 5vw, 42px) auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ------------------------------------------------------------- year blocks */
+
+.years { display: grid; gap: clamp(16px, 3vw, 22px); }
+
+.year-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(18px, 4vw, 34px);
+  padding: clamp(20px, 4vw, 30px) clamp(20px, 4vw, 34px);
+  background: rgba(253, 246, 231, .045);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  color: inherit;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.year-card:hover,
+.year-card:focus-visible {
+  background: rgba(253, 246, 231, .085);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.year-card .numeral {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 9vw, 3.9rem);
+  line-height: 1;
+  color: var(--gold);
+  letter-spacing: -.02em;
+}
+
+.year-card .blurb { margin: 0 0 .45rem; font-size: 1.02rem; }
+
+.year-card .contents {
+  margin: 0;
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+.year-card .go {
+  display: inline-block;
+  margin-top: .55rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* --------------------------------------------------------- year page: back */
+
+.backlink {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+
+.backlink:hover, .backlink:focus-visible { color: var(--gold); }
+
+.masthead h1.year-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 11vw, 5rem);
+  line-height: 1;
+  margin: 0;
+  color: var(--paper);
+}
+
+/* ---------------------------------------------------------------- an event */
+
+.event { margin-top: clamp(34px, 6vw, 56px); }
+
+.event-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem .9rem;
+  padding-bottom: .7rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.event-head h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 4.4vw, 2rem);
+  margin: 0;
+  color: var(--paper);
+}
+
+.event-head .when {
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent, var(--gold));
+  background: color-mix(in srgb, var(--accent, #c8a24a) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, #c8a24a) 45%, transparent);
+  padding: .26rem .6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.event-blurb {
+  margin: .8rem 0 0;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+/* ------------------------------------------------------------ page tiles */
+
+.pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: clamp(12px, 2.4vw, 18px);
+  margin-top: clamp(16px, 3vw, 22px);
+}
+
+.page-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 3.4vw, 24px);
+  background: var(--paper);
+  color: #24312b;
+  border-radius: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .3);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.page-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--accent, var(--gold));
+}
+
+.page-card:hover,
+.page-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, .38);
+  outline: none;
+}
+
+.page-card .icon { font-size: 1.75rem; line-height: 1; margin: .35rem 0 .6rem; }
+
+.page-card h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.28rem;
+  margin: 0 0 .45rem;
+  color: #1a2621;
+}
+
+.page-card p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: #55635b;
+}
+
+.page-card .open {
+  margin-top: 1rem;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent, #a8181d);
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.foot {
+  margin-top: clamp(50px, 9vw, 90px);
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: #6d7c74;
+  font-size: .8rem;
+}
+
+.empty {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px dashed var(--rule);
+  border-radius: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

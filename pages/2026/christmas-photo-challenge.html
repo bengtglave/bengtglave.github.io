@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Photos of Christmas | Christmas Cheer 2026</title>
+<style>
+  :root {
+    --cream:#fff8e9;
+    --paper:#fffdf6;
+    --red:#a8181d;
+    --deep-red:#7f1015;
+    --green:#0f4d3d;
+    --gold:#d2a23a;
+    --ink:#33281f;
+    --soft:#efe4cf;
+  }
+
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(255,255,255,.15) 0 2px, transparent 3px),
+      linear-gradient(135deg, #0d3f33, #082c25 55%, #0f4d3d);
+    color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    padding:24px 12px;
+  }
+
+  .invite {
+    width:min(1120px, 100%);
+    margin:auto;
+    background:var(--cream);
+    border:10px solid var(--deep-red);
+    outline:3px solid var(--gold);
+    box-shadow:0 24px 70px rgba(0,0,0,.38);
+    overflow:hidden;
+    position:relative;
+  }
+
+  .stripe {
+    height:14px;
+    background:repeating-linear-gradient(
+      45deg,
+      #b51f24 0 12px,
+      #fff7e8 12px 24px
+    );
+  }
+
+  header {
+    text-align:center;
+    padding:34px 24px 18px;
+    background:
+      radial-gradient(circle at top, rgba(210,162,58,.18), transparent 45%),
+      var(--paper);
+  }
+
+  .kicker {
+    display:inline-block;
+    color:var(--green);
+    letter-spacing:.18em;
+    font-weight:700;
+    font-size:.82rem;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+
+  h1 {
+    margin:0;
+    color:var(--red);
+    font-size:clamp(2.4rem, 7vw, 5.4rem);
+    line-height:.9;
+    letter-spacing:-.03em;
+  }
+
+  h1 span {
+    display:block;
+    color:var(--green);
+    font-style:italic;
+    font-size:.72em;
+    margin-top:9px;
+  }
+
+  .subtitle {
+    max-width:790px;
+    margin:20px auto 0;
+    font-size:clamp(1.05rem, 2.2vw, 1.35rem);
+    line-height:1.55;
+  }
+
+  .santa-note {
+    width:min(880px, calc(100% - 32px));
+    margin:18px auto 28px;
+    background:#fff4dc;
+    border:2px solid var(--gold);
+    border-radius:16px;
+    padding:18px 22px;
+    text-align:center;
+    box-shadow:0 7px 0 rgba(127,16,21,.08);
+    font-size:1.08rem;
+    line-height:1.55;
+  }
+
+  .santa-note strong {
+    color:var(--red);
+    font-size:1.16rem;
+  }
+
+  .choice-title {
+    text-align:center;
+    color:var(--green);
+    font-size:clamp(1.45rem, 3vw, 2.1rem);
+    margin:8px 20px 6px;
+  }
+
+  .choice-sub {
+    text-align:center;
+    margin:0 auto 24px;
+    max-width:740px;
+    line-height:1.5;
+    font-size:1rem;
+  }
+
+  .options {
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:22px;
+    padding:0 24px 26px;
+  }
+
+  .card {
+    background:var(--paper);
+    border:2px solid #d8c49d;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 24px rgba(72,42,17,.13);
+    display:flex;
+    flex-direction:column;
+  }
+
+  .card-head {
+    text-align:center;
+    padding:16px 14px 12px;
+    background:linear-gradient(180deg, #fff8e8, #f7ecd8);
+    border-bottom:1px solid #dbc9a7;
+  }
+
+  .badge {
+    display:inline-grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--red);
+    color:white;
+    font-weight:700;
+    margin-right:8px;
+  }
+
+  .card h2 {
+    display:inline;
+    color:var(--green);
+    font-size:1.45rem;
+    margin:0;
+  }
+
+  .card p {
+    margin:8px auto 0;
+    max-width:520px;
+    line-height:1.45;
+    font-size:.98rem;
+  }
+
+  .image-wrap {
+    padding:14px;
+    background:#eadfc9;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .image-wrap img {
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:8px;
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
+  }
+
+  .pick {
+    text-align:center;
+    padding:13px 14px 15px;
+    color:var(--deep-red);
+    font-weight:700;
+    letter-spacing:.03em;
+    background:#fff9ee;
+  }
+
+  .rules {
+    margin:0 24px 28px;
+    padding:22px;
+    background:var(--green);
+    color:#fff9e9;
+    border:3px solid var(--gold);
+    border-radius:16px;
+    text-align:center;
+  }
+
+  .rules h3 {
+    margin:0 0 10px;
+    color:#ffe3a2;
+    font-size:1.4rem;
+  }
+
+  .rules p {
+    margin:0;
+    line-height:1.6;
+    font-size:1.02rem;
+  }
+
+  .closing {
+    text-align:center;
+    padding:22px 22px 30px;
+    background:#f3e5c9;
+    border-top:1px solid #d8c49d;
+  }
+
+  .closing .big {
+    color:var(--red);
+    font-size:clamp(1.35rem, 3vw, 2rem);
+    font-weight:700;
+    margin-bottom:7px;
+  }
+
+  .closing .script {
+    color:var(--green);
+    font-style:italic;
+    font-size:1.12rem;
+  }
+
+  .tiny {
+    margin-top:12px;
+    font-size:.82rem;
+    opacity:.76;
+  }
+
+  @media (max-width:800px) {
+    .options { grid-template-columns:1fr; padding:0 14px 22px; }
+    .rules { margin-left:14px; margin-right:14px; }
+    header { padding-left:16px; padding-right:16px; }
+    .invite { border-width:6px; }
+  }
+
+  @media print {
+    body { background:white; padding:0; }
+    .invite { box-shadow:none; width:100%; border-width:4px; }
+    .options { gap:12px; }
+  }
+</style>
+</head>
+<body>
+<style>
+.site-hubbar{position:relative;z-index:2147483647;display:flex;align-items:center;gap:.6rem;
+  flex-wrap:wrap;padding:.55rem 1rem;background:#1d2a24;color:#f3e8d2;
+  font:600 .82rem/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  letter-spacing:.02em;border-bottom:2px solid #c8a24a;box-sizing:border-box}
+.site-hubbar a{color:#f3e8d2;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px}
+.site-hubbar a:hover,.site-hubbar a:focus{border-bottom-color:#c8a24a;color:#fff}
+.site-hubbar .sep{color:#7e8b82}
+.site-hubbar .here{color:#c8a24a}
+</style>
+<div class="site-hubbar">
+  <a href="../../index.html">&#8592; Glave Family Happenings</a>
+  <span class="sep">/</span>
+  <a href="../../year.html?y=2026">2026</a>
+  <span class="sep">/</span>
+  <span class="here">12 Photos of Christmas</span>
+</div>
+
+  <main class="invite">
+    <div class="stripe"></div>
+
+    <header>
+      <div class="kicker">Christmas Cheer 2026 • Making Merry, Making Memories</div>
+      <h1>12 Photos <span>of Christmas</span></h1>
+      <p class="subtitle">
+        This year, every household gets a little holiday homework: capture twelve merry moments
+        before the season slips away in a blur of cookies, wrapping paper, and somebody asking
+        where the tape went.
+      </p>
+    </header>
+
+    <section class="santa-note">
+      <strong>🎅 You better think twice...</strong><br>
+      Santa isn't only checking his list this year. At the end of the holiday season,
+      he'll be collecting your <strong>12 Photos of Christmas</strong> to make sure you actually
+      saved a few of those chaotic, cozy, ridiculous, wonderful memories.
+      No photographic evidence? Very suspicious. 👀
+    </section>
+
+    <h2 class="choice-title">Choose Your Christmas Photo Mission</h2>
+    <p class="choice-sub">
+      Pick <strong>one</strong> of the two themes below. Both lead to twelve photos,
+      but the adventures are a little different. Choose your favorite and start snapping anytime in December.
+    </p>
+
+    <section class="options">
+      <article class="card">
+        <div class="card-head">
+          <span class="badge">1</span><h2>The Classic Christmas Challenge</h2>
+          <p>Specific festive prompts, cozy details, silly faces, and classic holiday snapshots.</p>
+        </div>
+        <div class="image-wrap">
+          <img src="../../assets/img/christmas-photo-challenge/ea50a70dc9.png" alt="Option 1: 12 Photos of Christmas classic photo challenge">
+        </div>
+        <div class="pick">Pick this one if you love a good Christmas scavenger hunt. 🎄</div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="badge">2</span><h2>The Christmas Story Challenge</h2>
+          <p>Broader themes that let you decide what your family's Christmas story looks like this year.</p>
+        </div>
+        <div class="image-wrap">
+          <img src="../../assets/img/christmas-photo-challenge/39fdb66c6a.png" alt="Option 2: 12 Photos of Christmas story-style photo challenge">
+        </div>
+        <div class="pick">Pick this one if you want more freedom to capture the moment your way. 📸</div>
+      </article>
+    </section>
+
+    <section class="rules">
+      <h3>Santa's Official Fine Print</h3>
+      <p>
+        Choose one theme • Take all 12 photos during December • Phones absolutely count •
+        Perfection is forbidden • Funny outtakes are encouraged • Pets may participate without signing a release •
+        Bring or share your finished collection at the end of the holiday season.
+      </p>
+    </section>
+
+    <footer class="closing">
+      <div class="big">Twelve photos. One Christmas. A whole pile of memories.</div>
+      <div class="script">Same people • New moments • More memories ❤️</div>
+      <div class="tiny">Christmas Cheer 2026</div>
+    </footer>
+
+    <div class="stripe"></div>
+  </main>
+</body>
+</html>
