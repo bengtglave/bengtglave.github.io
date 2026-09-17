@@ -43,8 +43,41 @@ const SITE = {
     /* ---------------------------------------------------------------- 2026 */
     {
       year: 2026,
-      blurb: "A full carnival of Christmas.",
+      blurb: "A whole October of magic, and a full carnival of Christmas.",
       events: [
+        {
+          name: "Season of the Witch",
+          when: "October 2026",
+          emoji: "\u{1F52E}",
+          accent: "#7d4a9e",
+          blurb: "Magic, mayhem and monsters. The Halloween season, start to finish.",
+          pages: [
+            {
+              title: "The October Spellbook",
+              emoji: "\u{1F408}\u{200D}\u{2B1B}",
+              blurb: "The whole month's plan — eleven scheduled nights, a shelf of weather-permitting adventures, and everyone's assigned role.",
+              href: "pages/2026/october-spellbook.html"
+            },
+            {
+              title: "The Glave Laboratory",
+              emoji: "\u{1F52C}",
+              blurb: "Twelve authorized experiments, each with a mission, an equipment list, the specimens required, and the science hiding behind the sorcery.",
+              href: "pages/2026/glave-laboratory.html"
+            },
+            {
+              title: "The Witch's Pantry",
+              emoji: "\u{2697}\u{FE0F}",
+              blurb: "Build a potion or a concoction from the shelves. Tap any specimen only when you dare to reveal its mortal identity.",
+              href: "pages/2026/witchs-pantry.html"
+            },
+            {
+              title: "The Witch's Kitchen Lexicon",
+              emoji: "\u{1F4D6}",
+              blurb: "Every mortal ingredient and its truer name — 107 of them across nine shelves, searchable when the Grimoire fails you.",
+              href: "pages/2026/witchs-kitchen-lexicon.html"
+            }
+          ]
+        },
         {
           name: "Christmas Cheer Carnival",
           when: "December 2026",

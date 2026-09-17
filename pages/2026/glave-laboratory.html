@@ -1,0 +1,264 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101713"><title>The Glave Laboratory</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#0b100e;color:#f4e4bd;font-family:Georgia,serif}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 20% 5%,#263f31 0,transparent 27%),radial-gradient(circle at 90% 18%,#3b1944 0,transparent 25%),linear-gradient(#111813,#080b09)}
+.wrap{max-width:650px;margin:auto;padding:16px 13px 90px}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:24px 12px}
+.labmark{font-size:4rem} .eyebrow{letter-spacing:.18em;font-size:.76rem;color:#a9d36f}
+h1{font-size:clamp(3rem,14vw,5.3rem);line-height:.84;margin:.18em 0;color:#e8d09d;text-shadow:2px 3px #244b2b}
+.hero h2{margin:8px 0;color:#b6e36f;font-size:1.1rem;letter-spacing:.08em}
+.warning{display:inline-block;margin:18px auto;padding:9px 14px;border:1px solid #6f8e56;border-radius:30px;background:#18271d;color:#d6f28d;font-weight:bold}
+.intro{background:#ead6aa;color:#251d18;border:1px solid #9e7b48;border-radius:17px;padding:20px 17px;box-shadow:0 10px 25px #0008;text-align:center;line-height:1.5}
+.intro h2{margin:0;color:#273c28} .status{margin-top:14px;padding:12px;background:#17221a;color:#d8ec9d;border-radius:10px;font-weight:bold}
+.heading{text-align:center;margin:34px 0 13px} .heading h2{margin:0;color:#d9ef91} .heading p{margin:5px;color:#b8a7ba;font-style:italic}
+.file{background:#ead7ae;color:#261d18;border:1px solid #9f7c48;border-radius:13px;margin:11px 0;overflow:hidden;box-shadow:0 8px 20px #0008}
+.filehead{width:100%;display:grid;grid-template-columns:48px 1fr 22px;gap:10px;align-items:center;padding:13px;background:transparent;border:0;text-align:left;font-family:Georgia,serif;color:inherit;-webkit-appearance:none;appearance:none;touch-action:manipulation}
+.num{width:44px;height:44px;border-radius:8px;background:#1c2a20;color:#bce76d;display:flex;align-items:center;justify-content:center;font-weight:bold;border:1px solid #55734d}
+.fhtext h3{margin:2px 0;font-size:1.08rem;color:#263b28} .fhtext p{margin:3px 0;font-size:.84rem;color:#6a4b34} .tag{font-size:.68rem;letter-spacing:.09em;color:#74437b;font-weight:bold}
+.chev{font-size:1.4rem;color:#5e3765;transition:.2s} .file.open .chev{transform:rotate(90deg)}
+.filebody{display:none;padding:0 14px 16px 72px;line-height:1.45} .file.open .filebody{display:block}
+.filebody section{margin:10px 0} h4{margin:0 0 6px;color:#3e2547;font-size:.9rem} ul,ol{margin:6px 0;padding-left:20px} li{margin:4px 0}
+.science{padding:11px;border-left:4px solid #4b762f;background:#fff4}
+.protocol{width:100%;margin-top:12px;padding:12px;border:1px solid #6b4a70;border-radius:9px;background:#2d1b34;color:#f2dcac;font:700 .83rem Georgia,serif;text-align:left;display:flex;justify-content:space-between;-webkit-appearance:none;appearance:none;touch-action:manipulation}
+.protocolbody{display:none;padding:10px 4px 2px} .protocolbody.show{display:block}
+.bottom{margin:30px 0 0;background:#17221a;border:1px solid #4f7048;border-radius:15px;padding:20px;text-align:center}
+.bottom h2{color:#c7ed78;margin:0 0 12px} .readout{font-family:ui-monospace,Menlo,monospace;line-height:1.8;color:#e8d6ad}
+.footer{text-align:center;color:#8f9a88;font-size:.75rem;margin-top:25px}
+.top{position:fixed;right:15px;bottom:15px;width:45px;height:45px;border-radius:50%;background:#263b2a;color:#d9ef91;border:1px solid #66815e;font-size:1.15rem;-webkit-appearance:none;appearance:none;touch-action:manipulation}
+@media(max-width:430px){.filebody{padding-left:14px} .twocol{display:block}}
+</style></head><body>
+<style>
+.site-hubbar{position:relative;z-index:2147483647;display:flex;align-items:center;gap:.6rem;
+  flex-wrap:wrap;padding:.55rem 1rem;background:#1d2a24;color:#f3e8d2;
+  font:600 .82rem/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  letter-spacing:.02em;border-bottom:2px solid #c8a24a;box-sizing:border-box}
+.site-hubbar a{color:#f3e8d2;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px}
+.site-hubbar a:hover,.site-hubbar a:focus{border-bottom-color:#c8a24a;color:#fff}
+.site-hubbar .sep{color:#7e8b82}
+.site-hubbar .here{color:#c8a24a}
+</style>
+<div class="site-hubbar">
+  <a href="../../index.html">&#8592; Glave Family Happenings</a>
+  <span class="sep">/</span>
+  <a href="../../year.html?y=2026">2026</a>
+  <span class="sep">/</span>
+  <span class="here">The Glave Laboratory</span>
+</div>
+<div class="wrap">
+<section class="hero"><div class="eyebrow">AUTHORIZED PERSONNEL ONLY</div><div class="labmark">🔬⚡</div><h1>THE GLAVE<br>LABORATORY</h1><h2>ARCHIVES OF QUESTIONABLE SCIENCE</h2><div class="warning">12 AUTHORIZED EXPERIMENTS</div><div>Tap into the archives ↓</div></section>
+<section class="intro"><h2>LABORATORY ARCHIVES</h2><p>Within these files lie strange substances, invisible forces, undead polymers, bubbling reactions and several experiments that look suspiciously like magic.</p><p><b>Open any file to inspect the mission, equipment, specimens and science.</b> Full protocols remain tucked inside for the dangerously curious.</p><div class="status">STATUS: CLEARED FOR FAMILY EXPERIMENTATION 🧪</div></section>
+<div class="heading"><h2>☠ EXPERIMENT ARCHIVES ☠</h2><p>No particular order. Science prefers surprises.</p></div>
+
+    <article class="file" id="exp1">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">01</div>
+        <div class="fhtext"><span class="tag">DENSITY + GAS</span><h3>Toxic Waste: The Bubbling Barrel</h3><p>Radioactive-looking blobs rise, burst and sink again.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a bubbling toxic-waste bottle using oil, water and an effervescent tablet, then observe why the glowing blobs rise and fall.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Clear plastic bottle or tall jar</li><li>Measuring cup</li><li>Funnel, optional</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Vegetable oil</li><li>Water</li><li>Green or neon food coloring</li><li>Alka-Seltzer or generic effervescent tablet</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Oil and water separate because of their different properties and densities. The tablet reacts in the water and releases carbon dioxide bubbles that carry colored water upward. When the bubbles escape, the water sinks again.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Fill the bottle about one-third with water and add green food coloring.</li><li>Slowly pour vegetable oil on top.</li><li>Drop in a piece of effervescent tablet.</li><li>Watch the colored blobs travel upward.</li><li>Keep watching as bubbles burst and the blobs sink again.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp2">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">02</div>
+        <div class="fhtext"><span class="tag">CHEMICAL REACTION</span><h3>Ghost Balloon</h3><p>Bring a ghost to life without taking a single breath.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>A ghost has been captured inside an ordinary balloon. Bring it to life without blowing into it.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>1 small empty plastic bottle</li><li>1 white balloon</li><li>Funnel</li><li>Measuring spoon</li><li>Measuring cup</li><li>Black marker</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>1/2 cup vinegar</li><li>2–3 tablespoons baking soda</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Baking soda and vinegar react to create carbon dioxide gas. The gas travels up the bottle and inflates the balloon.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Draw a spooky ghost face on the balloon.</li><li>Pour 1/2 cup vinegar into the bottle.</li><li>Use a funnel to put 2–3 tablespoons baking soda inside the balloon.</li><li>Stretch the balloon opening over the bottle without dropping the baking soda yet.</li><li>Lift the balloon so the baking soda falls into the bottle.</li><li>Watch the ghost inflate.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp3">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">03</div>
+        <div class="fhtext"><span class="tag">TEMPERATURE + ENERGY</span><h3>Frozen Monster Hand</h3><p>A monster is trapped in ice. Science must set it free.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Freeze a creepy monster hand, then compare different methods for melting the ice and freeing it.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Plastic glove</li><li>Large container or tub</li><li>Scissors</li><li>Timer, optional</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Water</li><li>Food coloring, optional</li><li>Small toy spider, eyeball or creature</li><li>Salt</li><li>Warm water</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Water freezes into ice around 32°F (0°C). Salt lowers water’s freezing point, while warm water transfers thermal energy to the ice. Different melting methods work at different speeds.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Place a small toy inside a glove, fill the glove with water and tie it closed.</li><li>Freeze it overnight or until completely solid.</li><li>Remove or cut away the glove to reveal the frozen hand.</li><li>Compare room-temperature melting, warm water and salt.</li><li>Time the methods and decide which frees the monster fastest.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp4">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">04</div>
+        <div class="fhtext"><span class="tag">ACIDS + BASES</span><h3>Witch’s Bubbling Brew</h3><p>A fizzing potion with bubbles, color and cauldron-worthy chemistry.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a bubbling potion, watch the reaction and explore how acids and bases can produce magical-looking changes.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Clear cup or beaker</li><li>Measuring spoons</li><li>Spoon or stir stick</li><li>Small bowl, optional</li><li>Tray or baking sheet</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Baking soda</li><li>Vinegar</li><li>Water</li><li>Red cabbage indicator solution or purple food coloring</li><li>Dish soap, optional</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Baking soda is a base and vinegar is an acid. Their reaction releases carbon dioxide. With a true cabbage indicator, changing pH also changes the potion’s color.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Add about 1/4 cup water and cabbage indicator to a clear cup.</li><li>Stir in 1 teaspoon baking soda.</li><li>Slowly add 2–4 tablespoons vinegar.</li><li>Watch the bubbles and color change.</li><li>Optionally add a little dish soap for larger bubbles.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp5">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">05</div>
+        <div class="fhtext"><span class="tag">DENSITY</span><h3>Density Potion</h3><p>Build a potion whose colors stack instead of mixing.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a colorful layered potion using liquids with different densities, then see how many distinct layers you can make.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Clear glass or plastic cup</li><li>Measuring cups or spoons</li><li>Spoon, optional</li><li>Food coloring, optional</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Honey or corn syrup</li><li>Dish soap</li><li>Water, optionally colored</li><li>Vegetable oil</li><li>Rubbing alcohol, optional</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Liquids with different densities settle into layers. Denser liquids sink while less-dense liquids float above them.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Pour honey or corn syrup into the cup first.</li><li>Slowly add dish soap and let it settle.</li><li>Carefully pour colored water down the side.</li><li>Add vegetable oil slowly and watch it float above the water.</li><li>Optionally add rubbing alcohol last and observe where it settles.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp6">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">06</div>
+        <div class="fhtext"><span class="tag">CATALYSIS</span><h3>Elephant Toothpaste</h3><p>A giant foamy eruption from remarkably ordinary ingredients.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Combine common household ingredients to create a giant foamy eruption and see how quickly chemistry can make a mountain of bubbles.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Tall bottle or flask</li><li>Funnel</li><li>Measuring cup</li><li>Spoon</li><li>Tray or baking sheet</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>3% hydrogen peroxide</li><li>Liquid dish soap</li><li>Warm water</li><li>Food coloring</li><li>1 teaspoon yeast</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Hydrogen peroxide breaks down into water and oxygen. Yeast speeds the process, while dish soap traps the released oxygen in bubbles and creates a huge foam.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Mix 1 teaspoon yeast with 1/4 cup warm water and let it sit about 5 minutes.</li><li>Add a few drops of food coloring to about 1/2 cup 3% hydrogen peroxide in the bottle.</li><li>Add a squirt of dish soap and swirl gently.</li><li>Carefully pour in the yeast mixture and step back.</li><li>Watch the foam erupt.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp7">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">07</div>
+        <div class="fhtext"><span class="tag">STATIC ELECTRICITY</span><h3>Frankenstein’s Static Electricity</h3><p>Harness an invisible force with nothing but friction.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Discover the power of static electricity. Give a balloon a charge, then use that invisible force to move, pull, bend and stick lightweight objects.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Balloons</li><li>Tissue paper (ghosts)</li><li>Small paper spiders or bats</li><li>Access to a faucet with a thin stream of water</li><li>Salt &amp; pepper or another lightweight mixture</li><li>Wool cloth, hair, or soft fabric for rubbing</li><li>Small bowl or plate</li><li>Scissors, if needed</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>1 inflated balloon</li><li>Tissue paper cut into small pieces</li><li>Lightweight paper spiders or bats</li><li>Salt &amp; pepper mixture</li><li>Water from a thin faucet stream</li><li>Wool cloth, hair, or sweater</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Friction transfers electrons to the balloon, giving it a static charge. That charge can attract lightweight objects, bend a thin stream of water and even make the balloon cling to a wall.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Rub the balloon on hair or wool for 10–20 seconds to charge it.</li><li>Hold the charged balloon near tissue-paper ghosts and watch them jump.</li><li>Try lightweight paper creatures and see whether they dance or follow the balloon.</li><li>Bring the charged balloon near a very thin stream of water and watch the stream bend.</li><li>Test a lightweight salt-and-pepper mixture to see which particles are attracted most easily.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp8">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">08</div>
+        <div class="fhtext"><span class="tag">pH CHEMISTRY</span><h3>Vampire Blood</h3><p>One mysterious blood sample. Several very different reactions.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Use a mysterious sample of vampire blood to investigate mystery substances. Will they all react the same way?</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>4–5 clear cups or test tubes</li><li>Droppers or teaspoons</li><li>Measuring cup</li><li>Small containers for mystery liquids</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Red cabbage leaves</li><li>Hot water for indicator</li><li>Vinegar</li><li>Lemon juice</li><li>Water</li><li>Baking-soda solution</li><li>Dish-soap solution</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Red cabbage contains anthocyanin pigments that act as a pH indicator. Acids shift the purple liquid toward pink/red, while bases can shift it toward blue/green.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Chop red cabbage, cover with very hot water for 10–15 minutes, then strain to make the purple indicator.</li><li>Pour equal amounts of indicator into clear containers.</li><li>Add one mystery substance to the first sample.</li><li>Observe the color change.</li><li>Repeat with the remaining substances using a fresh blood sample each time and compare the colors.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp9">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">09</div>
+        <div class="fhtext"><span class="tag">BUOYANCY + GAS</span><h3>Dancing Creatures</h3><p>Tiny bubbles give ordinary raisins some impressive moves.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Drop strange little creatures into a bubbling chamber and make them rise from the depths and dance.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Tall clear glass or container</li><li>Spoon, optional</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Sparkling water or clear carbonated soda</li><li>Several raisins</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Carbon-dioxide bubbles cling to the rough surface of raisins, increasing their buoyancy. At the surface the bubbles pop, the raisins sink, and the cycle begins again.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Fill a clear container about three-quarters full with sparkling water.</li><li>Drop in several raisins.</li><li>Watch closely as bubbles attach to their surfaces.</li><li>Observe what happens when a raisin reaches the surface and loses its bubbles.</li><li>Compare a whole raisin with half a raisin.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp10">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">10</div>
+        <div class="fhtext"><span class="tag">pH INDICATOR</span><h3>Witches’ Brew</h3><p>A color-changing potion powered by real chemistry.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a magical-looking potion that changes color using red-cabbage indicator and ordinary acids and bases.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Clear cup or jar</li><li>Measuring spoons</li><li>Spoon or stir stick</li><li>2 small bowls</li><li>Flashlight, optional</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>1/2 cup water</li><li>1/4 cup white vinegar</li><li>Baking soda</li><li>Red cabbage or prepared cabbage pH indicator</li><li>Small bowl for making indicator</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Red cabbage anthocyanins change color depending on pH. Vinegar makes the indicator red/pink; baking soda can move it toward blue/green.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Make cabbage indicator by soaking chopped cabbage in hot water for 5–10 minutes.</li><li>Pour about 1/4 cup purple indicator into a clear cup.</li><li>Add 1–2 tablespoons vinegar and observe the change.</li><li>In a separate cup, add 1–2 tablespoons baking soda to indicator and observe again.</li><li>Experiment carefully with small additions to move the colors back and forth.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp11">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">11</div>
+        <div class="fhtext"><span class="tag">POLYMER SCIENCE</span><h3>Zombie Slime</h3><p>Solid? Liquid? Something wonderfully undead in between.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a batch of Zombie Slime and investigate just how strangely matter can behave.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Mixing bowl</li><li>Spoon</li><li>Measuring cup</li><li>Measuring spoons</li><li>Airtight container for storage</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>1/2 cup washable school glue</li><li>1/2 teaspoon baking soda</li><li>1–2 tablespoons contact-lens solution containing boric acid/borate</li><li>Green food coloring</li><li>Optional glitter, plastic bugs or googly eyes</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Glue contains long polymer chains. Borate helps link those chains into a stretchy network, changing the material’s properties and creating slime.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Pour 1/2 cup glue into a mixing bowl.</li><li>Add several drops of green food coloring.</li><li>Mix in 1/2 teaspoon baking soda.</li><li>Add about 1 tablespoon contact solution and stir.</li><li>Knead when the slime pulls away from the bowl, adding a few more drops of contact solution if needed.</li><li>Stretch, roll and squish it to investigate its properties.</li></ol></div>
+      </div>
+    </article>
+    <article class="file" id="exp12">
+      <button class="filehead" type="button" onclick="toggleFile(this)">
+        <div class="num">12</div>
+        <div class="fhtext"><span class="tag">ACID-BASE REACTION</span><h3>The Pumpkin Protocol</h3><p>Carve it. Fill it. Fizz it. Discover it.</p></div>
+        <span class="chev">›</span>
+      </button>
+      <div class="filebody">
+        <section><h4>🧪 YOUR MISSION</h4><p>Create a pumpkin that fizzes, foams and overflows using a classic chemical reaction with a spooky vessel.</p></section>
+        <div class="twocol">
+          <section><h4>🥽 GATHER YOUR EQUIPMENT</h4><ul><li>Small to medium pumpkin</li><li>Spoon for scooping</li><li>Carving tools with adult help</li><li>Measuring cup and spoon</li><li>Bowl or container</li><li>Funnel, optional</li><li>Tray or baking sheet</li><li>Towels or newspaper</li></ul></section>
+          <section><h4>🧴 SPECIMENS REQUIRED</h4><ul><li>Baking soda</li><li>Vinegar</li><li>Dish soap</li><li>Water, optional</li><li>Food coloring, optional</li></ul></section>
+        </div>
+        <section class="science"><h4>⚛️ WHAT SORCERY IS THIS?!</h4><p>Baking soda and vinegar react to release carbon dioxide gas. Dish soap traps that gas in bubbles, creating foamy overflow.</p></section>
+        <button class="protocol" type="button" onclick="toggleProtocol(this)">🗂 VIEW FULL EXPERIMENT PROTOCOL <span>+</span></button>
+        <div class="protocolbody"><ol><li>Carve the pumpkin and scoop out the inside.</li><li>Add a few spoonfuls of baking soda.</li><li>Add dish soap and optional food coloring.</li><li>Slowly pour in vinegar and step back.</li><li>Watch where the fizzy foam escapes.</li></ol></div>
+      </div>
+    </article>
+<section class="bottom"><h2>LABORATORY STATUS</h2><div class="readout">12 EXPERIMENTS AUTHORIZED<br>1 LITTLE WARLOCK<br>COUNTLESS QUESTIONABLE DECISIONS<br>SURVIVAL: EXPECTED</div></section>
+<div class="footer">THE GLAVE LABORATORY • OCTOBER 2026<br>OBSERVE • EXPLORE • DISCOVER • REPEAT</div>
+</div><button class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function toggleFile(btn){btn.closest('.file').classList.toggle('open');}
+function toggleProtocol(btn){var b=btn.nextElementSibling;b.classList.toggle('show');btn.querySelector('span').textContent=b.classList.contains('show')?'−':'+';}
+</script></body></html>

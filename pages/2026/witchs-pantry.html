@@ -1,0 +1,140 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1b1020"><title>The Witch's Pantry</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0c090e;color:#f1ddb6;font-family:Georgia,serif}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 15% 7%,#4d2855 0,transparent 27%),radial-gradient(circle at 88% 19%,#415224 0,transparent 25%),linear-gradient(#171019,#09070a)}
+.wrap{max-width:660px;margin:auto;padding:16px 13px 90px}.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:20px 10px}
+.eyebrow{letter-spacing:.19em;color:#c6a15f;font-size:.72rem}.heroicon{font-size:4.4rem}h1{font-size:clamp(3rem,15vw,5.4rem);line-height:.84;margin:.18em 0;color:#efd19a;text-shadow:2px 3px #612845}
+.hero h2{font-size:1rem;letter-spacing:.1em;color:#bee371}.pill{margin:17px auto;padding:9px 14px;border:1px solid #725078;border-radius:30px;background:#2d1933;color:#efd19a;font-weight:bold}
+.intro{background:#ecd7ab;color:#291b22;border:1px solid #a67d48;border-radius:17px;padding:20px 17px;box-shadow:0 10px 25px #0008;text-align:center;line-height:1.5}.intro h2{margin:0;color:#47244f}
+.law{margin-top:14px;background:#26152c;color:#f0d29b;border-radius:10px;padding:12px}.law b{color:#cce97e}
+.workshop{margin-top:34px}.workhead{text-align:center;padding:18px 12px;background:#1d1421;border:1px solid #65486b;border-radius:15px 15px 0 0}.workicon{font-size:2.8rem}.workhead h2{margin:3px 0;color:#e8cb94;font-size:1.75rem}.workhead p{margin:4px;color:#bfaabe;font-style:italic}
+.shelf{background:#26182a;border-left:1px solid #65486b;border-right:1px solid #65486b;padding:16px 11px 19px}.step{text-align:center;margin-bottom:12px}.step span{font-size:.68rem;letter-spacing:.16em;color:#a9d365;font-weight:bold}.step h3{margin:3px 0;color:#f0d5a0;font-size:1.15rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.specimen{min-height:112px;padding:12px 8px;background:linear-gradient(#35213b,#25182b);color:#f2d9a7;border:1px solid #725077;border-radius:10px;font-family:Georgia,serif;text-align:center;-webkit-appearance:none;appearance:none;touch-action:manipulation;position:relative;overflow:hidden}
+.sigil{display:block;color:#b9dc6a;font-size:1rem}.spooky{display:block;font-weight:bold;font-size:1rem;line-height:1.12;margin:5px 0}.hint{display:block;font-size:.59rem;letter-spacing:.08em;color:#aa91ad;margin-top:7px}.real{display:none;margin-top:7px;padding-top:7px;border-top:1px solid #745d70;color:#d9ef8c;font-weight:bold;line-height:1.15}.real small{display:block;color:#bca8bd;font-size:.55rem;letter-spacing:.08em;margin-bottom:4px}.specimen.revealed{background:#1c2a1d;border-color:#617a49}.specimen.revealed .hint{display:none}.specimen.revealed .real{display:block}
+.nameit{text-align:center;background:#ead5a9;color:#43244a;border:1px solid #a67d48;border-radius:0 0 15px 15px;padding:15px;font-weight:bold;letter-spacing:.05em}
+.divider{text-align:center;margin:30px 0 5px;color:#bca5bd;font-size:.9rem}.crossnote{margin:20px 0;background:#ead6aa;color:#2b1c23;border:1px solid #a67d48;border-radius:13px;padding:15px;text-align:center;line-height:1.45}.crossnote b{color:#48244f}
+.orders{margin-top:28px;background:#182019;border:1px solid #557048;border-radius:15px;padding:20px;text-align:center}.orders h2{color:#caeb7d;margin:0 0 9px}.orders p{line-height:1.5}.footer{text-align:center;color:#958397;font-size:.74rem;margin-top:26px}
+.top{position:fixed;right:15px;bottom:15px;width:45px;height:45px;border-radius:50%;background:#43234c;color:#f1d59d;border:1px solid #7b5b80;font-size:1.15rem;-webkit-appearance:none;appearance:none;touch-action:manipulation}
+@media(max-width:370px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<style>
+.site-hubbar{position:relative;z-index:2147483647;display:flex;align-items:center;gap:.6rem;
+  flex-wrap:wrap;padding:.55rem 1rem;background:#1d2a24;color:#f3e8d2;
+  font:600 .82rem/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  letter-spacing:.02em;border-bottom:2px solid #c8a24a;box-sizing:border-box}
+.site-hubbar a{color:#f3e8d2;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px}
+.site-hubbar a:hover,.site-hubbar a:focus{border-bottom-color:#c8a24a;color:#fff}
+.site-hubbar .sep{color:#7e8b82}
+.site-hubbar .here{color:#c8a24a}
+</style>
+<div class="site-hubbar">
+  <a href="../../index.html">&#8592; Glave Family Happenings</a>
+  <span class="sep">/</span>
+  <a href="../../year.html?y=2026">2026</a>
+  <span class="sep">/</span>
+  <span class="here">The Witch's Pantry</span>
+</div>
+<div class="wrap">
+<section class="hero"><div class="eyebrow">AUTHORIZED ALCHEMISTS WELCOME</div><div class="heroicon">🧙‍♀️⚗️</div><h1>THE WITCH’S<br>PANTRY</h1><h2>POTIONS • CONCOCTIONS • CURIOSITIES</h2><div class="pill">MAGIC • MAYHEM • MONSTERS</div><div>Enter the pantry ↓</div></section>
+<section class="intro"><h2>WELCOME, ALCHEMIST</h2><p>The shelves are stocked. The labels are questionable. The ingredients are real.</p><p><b>Follow each pantry in order. Tap a magical specimen only when you dare to reveal its mortal identity.</b></p><div class="law">POTION LAW<br><b>Choose 1 Base • Add Magic • Add 1 Wild Ingredient</b><br><br>CONCOCTION LAW<br><b>Choose 1 Base • 3 Strange Ingredients • 1 Magical Dust</b></div></section><section class="workshop"><div class="workhead"><div class="workicon">🧪</div><h2>THE POTIONS PANTRY</h2><p>Pour • Mix • Stir • Cackle</p></div><div class="shelf"><div class="step"><span>STEP 1</span><h3>CHOOSE YOUR BASE</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Mermaid Tears</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Sprite</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Dryad Sap</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Lemonade</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Witch Fat</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Apple Juice</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Slime Mold Serum</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Green Hawaiian Punch</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Lycan Elixir</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Hawaiian Punch</span>
+    </button></div></div><div class="shelf"><div class="step"><span>STEP 2</span><h3>ADD MAGIC</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Full Moon Water</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Sparkling Water</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Vampire Blood</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Grenadine</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Necromancer’s Ink / Kraken Ink</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Food Coloring</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Love Potion / Unicorn Tears / Fairy Wings / Dust of the Forgotten</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Edible Shimmer</span>
+    </button></div></div><div class="shelf"><div class="step"><span>STEP 3</span><h3>ADD 1 WILD INGREDIENT</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Spider Eggs</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Sour Candies</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Hair of the Hag</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Sour Strings</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Moon Dust / Phantom Dust</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Colored Sugar</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Essence of Chaos / Soul Fragment Vial</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Pop Rocks</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Zombie Brain Juice</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Green Sherbet</span>
+    </button></div></div><div class="nameit">✒️ NAME YOUR POTION</div></section><div class="crossnote">🕯️ <b>PANTRY NOTE:</b> Hair of the Hag and Moon Dust / Phantom Dust appear on both sides of the Witch’s Kitchen. Some ingredients simply refuse to stay on one shelf.</div><section class="workshop"><div class="workhead"><div class="workicon">🍿</div><h2>THE CONCOCTIONS PANTRY</h2><p>Scoop • Mix • Create • Enjoy</p></div><div class="shelf"><div class="step"><span>STEP 1</span><h3>CHOOSE YOUR BASE</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Executioner’s Dust</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Buttered Popcorn</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Bone Powder</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Chex Mix</span>
+    </button></div></div><div class="shelf"><div class="step"><span>STEP 2</span><h3>ADD 3 STRANGE INGREDIENTS</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Cockroach Legs</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Pretzel Sticks</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Toad Warts</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Raisins</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Troll Toenails</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>M&amp;Ms</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Eye of the Watcher</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Whoppers / Malt Balls</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Third Eye Drops</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Candy Corn</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Wraith Mist</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Marshmallows</span>
+    </button><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Hair of the Hag</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Sour Strings</span>
+    </button></div></div><div class="shelf"><div class="step"><span>STEP 3</span><h3>ADD 1 MAGICAL DUST</h3></div><div class="grid"><button class="specimen" type="button" onclick="reveal(this)">
+      <span class="sigil">✦</span><span class="spooky">Moon Dust / Phantom Dust</span>
+      <span class="hint">TAP TO IDENTIFY</span>
+      <span class="real"><small>MORTAL INGREDIENT</small>Colored Sugar</span>
+    </button></div></div><div class="nameit">✒️ NAME YOUR CONCOCTION</div></section><section class="orders"><h2>THE ALCHEMIST’S ORDERS</h2><p>Follow the pantry formula, then experiment within it. Choose. Combine. Taste. Adjust. Give the creation a suitably ridiculous name.</p><p><b>The best inventions may earn a permanent page in the Witch’s Grimoire.</b></p></section>
+<div class="footer">THE WITCH’S PANTRY • OCTOBER 2026<br>OPEN UNDER WITCH SUPERVISION</div>
+</div><button class="top" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>function reveal(el){el.classList.toggle('revealed');}</script></body></html>
