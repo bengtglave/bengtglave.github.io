@@ -1,0 +1,4 @@
+# This is a family site. It is not meant to be found by searching for it.
+# Every page also carries <meta name="robots" content="noindex, nofollow">.
+User-agent: *
+Disallow: /

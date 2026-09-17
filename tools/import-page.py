@@ -40,6 +40,9 @@ EXT = {
 
 BAR_MARKER = "site-hubbar"
 
+# Keeps the page out of search results. See robots.txt for the other half.
+NOINDEX = '<meta name="robots" content="noindex, nofollow">'
+
 BAR_TEMPLATE = """
 <style>
 .site-hubbar{{position:relative;z-index:2147483647;display:flex;align-items:center;gap:.6rem;
@@ -87,6 +90,19 @@ def slug_images(html, slug, root_prefix, img_dir):
     return DATA_URI.sub(replace, html), len(seen)
 
 
+def inject_noindex(html):
+    """Add the robots meta to <head>. It only counts if it is in the head,
+    and it goes after the charset declaration, which belongs first."""
+    if 'name="robots"' in html:
+        return html
+
+    anchor = (re.search(r"<meta[^>]*charset[^>]*>", html, re.IGNORECASE)
+              or re.search(r"<head[^>]*>", html, re.IGNORECASE))
+    if anchor:
+        return html[: anchor.end()] + "\n" + NOINDEX + html[anchor.end():]
+    return NOINDEX + html
+
+
 def inject_bar(html, root_prefix, year, crumb):
     if BAR_MARKER in html:
         return html  # already imported once; do not stack bars
@@ -115,6 +131,7 @@ def main():
     print("{} ({:,} bytes)".format(os.path.basename(source), before))
 
     html, count = slug_images(html, slug, root_prefix, img_dir)
+    html = inject_noindex(html)
     html = inject_bar(html, root_prefix, year, crumb)
 
     os.makedirs(os.path.dirname(dest), exist_ok=True)
