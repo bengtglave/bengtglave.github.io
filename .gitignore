@@ -5,3 +5,7 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Kept local only — publishes our travel dates
+pages/2026/expedition-yucatan.html
+assets/img/expedition-yucatan/

@@ -43,7 +43,7 @@ const SITE = {
     /* ---------------------------------------------------------------- 2026 */
     {
       year: 2026,
-      blurb: "A jungle expedition and a full carnival of Christmas.",
+      blurb: "A full carnival of Christmas.",
       events: [
         {
           name: "Christmas Cheer Carnival",
@@ -65,22 +65,12 @@ const SITE = {
               href: "pages/2026/drink-menu.html"
             }
           ]
-        },
-        {
-          name: "Expedition Yucatán",
-          when: "November 22 – December 1, 2026",
-          emoji: "\u{1F334}",
-          accent: "#0d7476",
-          blurb: "Ten days across Bacalar, Río Bec, Calakmul and Tulum.",
-          pages: [
-            {
-              title: "Field Dispatch Command Center",
-              emoji: "\u{1F5FA}\u{FE0F}",
-              blurb: "Zoomable posters, day-by-day timelines, a cenote picker, and the official bat volcano decision.",
-              href: "pages/2026/expedition-yucatan.html"
-            }
-          ]
         }
+
+        /* Expedition Yucatán is deliberately kept off the public site — it
+           spells out when the house is empty. The page still exists locally at
+           pages/2026/expedition-yucatan.html (see .gitignore); to publish it,
+           un-ignore those files and add its event block back here. */
       ]
     }
 
