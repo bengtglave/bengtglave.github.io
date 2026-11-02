@@ -63,6 +63,12 @@ const SITE = {
           blurb: "Making merry, making memories. The year's holiday headquarters.",
           pages: [
             {
+              title: "The Carnival Program",
+              emoji: "\u{1F3AA}",
+              blurb: "The whole of December on one page — every night planned, the posters for each menu and guide, and what to do when the plan says \"decide on the day\".",
+              href: "pages/2026/carnival-program.html"
+            },
+            {
               title: "12 Photos of Christmas",
               emoji: "\u{1F4F8}",
               blurb: "A twelve-shot holiday scavenger hunt. Pick the Classic Challenge or the Story Challenge, then capture December before it blurs past.",
