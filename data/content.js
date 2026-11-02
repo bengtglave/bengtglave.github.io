@@ -17,33 +17,10 @@ const SITE = {
 
   years: [
 
-    /* ---------------------------------------------------------------- 2027 */
-    {
-      year: 2027,
-      blurb: "Ringing it in loud.",
-      events: [
-        {
-          name: "Glow Into the New Year",
-          when: "New Year's Eve",
-          emoji: "\u{1FAA9}",
-          accent: "#ff39d5",
-          blurb: "Neon, noise, and questionable dancing to carry us across midnight.",
-          pages: [
-            {
-              title: "Dance Move Roulette",
-              emoji: "\u{1F57A}",
-              blurb: "Tap the button, get a move, everybody does it for twenty seconds. Eighteen moves and no wrong answers.",
-              href: "pages/2027/dance-move-roulette.html"
-            }
-          ]
-        }
-      ]
-    },
-
     /* ---------------------------------------------------------------- 2026 */
     {
       year: 2026,
-      blurb: "A whole October of magic, and a full carnival of Christmas.",
+      blurb: "A whole October of magic, a full carnival of Christmas, and a glowing send-off.",
       events: [
         {
           name: "Season of the Witch",
@@ -96,6 +73,27 @@ const SITE = {
               emoji: "\u{1F378}",
               blurb: "Twelve drinks you can filter by spirit and flavor. Every one starts as a mocktail, and the spirited version is optional.",
               href: "pages/2026/drink-menu.html"
+            },
+            {
+              title: "Christmas Cheer Games Hub",
+              emoji: "\u{1F3C5}",
+              blurb: "Six games with the rules, setup, supply lists and scoring all written down — Mini Olympics, Jingle Bell Challenge, the Great Christmas Challenge, Family Feud, Mystery Stocking and Password.",
+              href: "pages/2026/christmas-games-hub.html"
+            }
+          ]
+        },
+        {
+          name: "Glow Into the New Year",
+          when: "December 31, 2026",
+          emoji: "\u{1FAA9}",
+          accent: "#ff39d5",
+          blurb: "Neon, noise, and questionable dancing to carry us across midnight.",
+          pages: [
+            {
+              title: "Dance Move Roulette",
+              emoji: "\u{1F57A}",
+              blurb: "Tap the button, get a move, everybody does it for twenty seconds. Eighteen moves and no wrong answers.",
+              href: "pages/2026/dance-move-roulette.html"
             }
           ]
         }
